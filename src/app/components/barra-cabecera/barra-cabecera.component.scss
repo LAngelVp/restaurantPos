@@ -1,0 +1,36 @@
+@use '@angular/material' as mat;
+mat-toolbar{
+    position: relative;
+    z-index: 1000;
+    height: 50px;
+    @include mat.toolbar-overrides((
+        container-background-color: var(--mat-sys-primary),
+        container-text-color: var(--mat-sys-on-primary),
+    ));
+    @include mat.icon-button-overrides((
+        ripple-color: var(--mat-sys-on-primary),
+    ));
+}
+.fondo_btn_icono{
+    background-color: var(--mat-sys-on-primary);
+}
+.menu_lateral{
+    position: absolute;
+    top: 0;
+    left: -15rem;
+    z-index: 13rem;
+    height: 100vh;
+    padding-top: 3.8rem;
+    padding: 3.8rem 1rem 0rem 1rem;
+    background-color: var(--mat-sys-primary);
+    box-shadow: 10px 0 20px -10px black;
+    transition: left 0.3s ease;
+}
+.menu_lateral_abierto{
+    left: 0rem;
+}
+
+::ng-deep .mat-ripple-element{
+    opacity: 0.3 !important;
+    transition: opacity 100ms !important;
+}

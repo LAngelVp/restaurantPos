@@ -1,0 +1,19 @@
+<mat-toolbar class="flex gap-3 z-50 fixed top-0 left-0 w-full">
+  <button mat-icon-button class="example-icon fondo_btn_icono" aria-label="Menú" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="font-bold">{{titulo | uppercase}}</span>
+</mat-toolbar>
+
+<div class="menu_lateral" [class.menu_lateral_abierto]="menuAbierto">
+  <ul class="flex flex-col gap-3 justify-center items-center">
+    @for (opcion of lista_funciones; track opcion.id) {
+      <li>
+        <button mat-raised-button extended class="opcion-menu">
+          <mat-icon>{{opcion.icono}}</mat-icon>
+          {{opcion.nombre}}
+        </button>
+      </li>
+    }
+  </ul>
+</div>
