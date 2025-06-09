@@ -1,4 +1,7 @@
 <app-barra-cabecera></app-barra-cabecera>
-<div class="flex w-full h-svh justify-center items-center">
+<div class="flex w-full h-full justify-center items-center">
     <img [src]="logotipo" alt="logo" class="flex w-auto object-cover">
 </div>
+@if (componente == false){
+    <app-pedidos></app-pedidos>
+}

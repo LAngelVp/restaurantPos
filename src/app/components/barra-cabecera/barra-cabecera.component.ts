@@ -4,6 +4,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDividerModule} from '@angular/material/divider';
 import { CommonModule } from '@angular/common';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-barra-cabecera',
@@ -12,7 +13,8 @@ import { CommonModule } from '@angular/common';
     MatToolbarModule,
     MatButtonModule,
     MatDividerModule,
-    MatIconModule
+    MatIconModule,
+    MatTooltipModule
   ],
   templateUrl: './barra-cabecera.component.html',
   styleUrl: './barra-cabecera.component.scss'
