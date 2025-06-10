@@ -1,15 +1,10 @@
-<mat-toolbar class="menu_lateral" [class.menu_lateral_abierto]="menuAbierto">
+<mat-toolbar class="menu_lateral">
   <div class="flex flex-col h-full py-3 justify-content-around contenerdor_opciones">
     <div class="flex flex-col gap-4 h-full">
-      <div class="">
-        <button mat-icon-button matTooltip="Perfil de usuario" class="btns" aria-label="Menú" (click)="toggleMenu()">
-          <mat-icon class="btns_icon">menu</mat-icon>
-        </button>
-      </div>
       <ul class="flex flex-col gap-4 items-center">
         @for (opcion of lista_funciones; track opcion.id) {
           <li>
-              <button mat-icon-button class="btns" aria-label="Menú" (click)="toggleMenu()">
+              <button mat-icon-button [matTooltip]="opcion.mensaje_tooltip" class="btns" aria-label="Menú" (click)="seleccion_de_componente(opcion.componente)">
                 <mat-icon class="btns_icon">{{opcion.icono}}</mat-icon>
               </button>
           </li>
@@ -17,7 +12,7 @@
       </ul>
     </div>
     <div>
-      <button class="btns_menu">
+      <button mat-icon-button matTooltip="Salir del sistema" class="btns">
         <mat-icon>logout</mat-icon>
       </button>
     </div>

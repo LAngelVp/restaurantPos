@@ -1,0 +1,66 @@
+<div class="flex justify-between p-5 items-center">
+    <div>
+        <H2 class=" text-2xl font-bold">
+            Gestión de inventario
+        </H2>
+        <p class="text-lg">
+            Administra el inventario de tu negocio
+        </p>
+    </div>
+    <div>
+        <button mat-flat-button>
+            <mat-icon class="tamaño_icono">add 2</mat-icon>
+            Agregar Producto
+        </button>
+    </div>
+</div>
+<div class="grid grid-cols-5 gap-4 px-4 py-5">
+  <mat-card class="card">
+    <mat-icon>inventory_2</mat-icon>
+    <div>
+        <h3 class="font-bold">Total Productos</h3>
+        <p class="text-center font-bold">5</p>
+    </div>
+  </mat-card>
+  <mat-card class="card">
+    <mat-icon>check_circle</mat-icon>
+    <div>
+        <h3 class="font-bold">Disponibles</h3>
+        <p class="text-center font-bold">0</p>
+    </div>
+  </mat-card>
+  <mat-card class="card">
+    <mat-icon>warning</mat-icon>
+    <div>
+        <h3 class="font-bold">Stock Bajo</h3>
+        <p class="text-center font-bold">2</p>
+    </div>
+  </mat-card>
+  <mat-card class="card">
+    <mat-icon>inventory</mat-icon>
+    <div>
+        <h3 class="font-bold">Agotados</h3>
+        <p class="text-center font-bold">1</p>
+    </div>
+  </mat-card>
+  <mat-card class="card">
+    <mat-icon>error_outline</mat-icon>
+     <div>
+        <h3 class="font-bold">Por Vencer</h3>
+        <p class="text-center font-bold">2</p>
+    </div>
+  </mat-card>
+</div>
+<div>
+    <app-tabla
+    [title]="'Inventario de productos'"
+    [subtitle]="'Lista completa de productos en el inventario del negocio'"
+    [displayedColumns]="displayedColumns"
+    [columnDefs]="columnDefs"
+    [dataSource]="dataSource">
+    </app-tabla>
+</div>
+
+
+
+

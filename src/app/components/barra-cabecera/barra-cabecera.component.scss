@@ -5,11 +5,11 @@ mat-toolbar{
         container-text-color: var(--mat-sys-on-primary),
     ));
     @include mat.icon-button-overrides((
-        ripple-color: var(--mat-sys-on-primary),
+        ripple-color: var(--mat-sys-outline),
     ));
 }
 .menu_lateral{
-    position: fixed;
+    position: relative;
     display: flex;
     z-index: 13rem;
     height: 100vh;
@@ -24,8 +24,8 @@ mat-toolbar{
     align-items: center;
     width: auto;
     height: auto;
-    background-color: var(--mat-sys-on-tertiary-fixed-variant);
-    color: var(--mat-sys-on-primary);
+    background-color: var(--mat-sys-on-tertiary);
+    color: var(--mat-sys-primary);
 }
 .btns_icon{
     font-size: 24px;

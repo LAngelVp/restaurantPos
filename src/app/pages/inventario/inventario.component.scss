@@ -1,0 +1,17 @@
+.card{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--mat-sys-on-primary);
+    box-shadow: 2px 2px 10px  0px var(--mat-sys-on-surface-variant);
+    padding: 1rem;
+}
+.card mat-icon{
+    font-size: 34px;
+    width: auto;
+    height: auto;
+    opacity: 75%;
+}
+

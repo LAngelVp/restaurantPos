@@ -1,7 +1,15 @@
-<app-barra-cabecera></app-barra-cabecera>
-<div class="flex w-full h-full justify-center items-center">
-    <img [src]="logotipo" alt="logo" class="flex w-auto object-cover">
+<div class="flex">
+    <div class="relative">
+        <app-barra-cabecera (cambio_de_componente)="cambiar_componente($event)"></app-barra-cabecera>
+    </div>
+    <!-- // CONTENEDOR DINAMICO -->
+    <div class="relative w-full">
+        @switch (componente_activo) {
+            @case ("pedidos") {<app-pedidos></app-pedidos>}
+            @case ("inventarios") {<app-inventario></app-inventario>}
+            @case ("clientes") {<app-clientes></app-clientes>}
+            @case ("empleados") {<app-empleados></app-empleados>}
+            @case ("logo") {<app-logo></app-logo>}
+        }
+    </div>
 </div>
-@if (componente == false){
-    <app-pedidos></app-pedidos>
-}
